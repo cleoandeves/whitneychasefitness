@@ -14,7 +14,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/evesdesign.css" rel="stylesheet">
+    <link href="css/cleoandeves.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -31,41 +31,41 @@
 </head>
 
 <body>
-    <nav>
-<div class="custom_nav">
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="nav-collapse">
-                 <ul class="nav nav-pills ">
-                    <li class="sidebar-brand">
-                   <a href="#top" class="brand" onclick = $("#menu-close").click(); ><strong>W H I T N E Y | C H A S E | F I T N E S S</strong></a>
-                    </li>
-                    <ul class="nav nav-pills pull-right">
+  
+<nav class="navbar navbar-default navbar-fixed-top">
+  
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#top" class="brand" onclick = $("#menu-close").click(); >WHITNEY CHASE | FITNESS</a> 
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse nav-stacked" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+
+                    <ul class="nav nav-pills">
                     <li>
-                        <a href="#method" onclick = $("#menu-close").click(); > METHOD</a>
+                        <a href="#method" onclick = $("#menu-close").click(); >METHOD</a>
                     </li>
                     <li>
-                        <a href="#packages" onclick = $("#menu-close").click(); > PACKAGES</a>
+                        <a href="#packages" onclick = $("#menu-close").click(); >PACKAGES</a>
                     </li>
                     <li>
-                        <a href="#services" onclick = $("#menu-close").click(); >ABOUT</a>
+                        <a href="#about" onclick = $("#menu-close").click(); > ABOUT</a>
                     </li>
                     <li>
-                        <a href="#contact" class="right-menu"onclick = $("#menu-close").click(); >CONTACT</a>
+                        <a href="#contact" class="right-menu" onclick = $("#menu-close").click(); >CONTACT</a>
                     </li>
                     </ul>
-                </ul>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div><!--/.nav-collapse -->
-           
-        </div><!-- /.navbar-inner -->
-    </div><!-- /.navbar -->
-</div><!--/.custom_nav-->
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
     <!-- Navigation -->
     <!-- Header -->
@@ -86,7 +86,7 @@
                     <img src="img/running.jpg" class="img-responsive" height="75%" width= "75%"  alt="Responsive image" style="center center scroll"></div>
                     <div class="col-lg-1 col-sm-1">
                     </div>
-                    <div class="col-lg-6 col-sm-6">
+                    <div class="col-lg-6 col-sm-12 col-xs-12">
                         <h2>METHOD</h2><br>
                          I believe that when you move good you look good. Training should not just be about looking good, but learning how to move properly so the activities you love doing the most benefit. <p>My training method integrates different movement patterns that correlate with your everyday life so you can feel and see the results immediately. <p>We will work on proper posture as it is key to relieving pain and learning how to breathe, and will help relieve stress and unlock your fitness potential. <p>Check out the packages below and I'll show you how to activate different muscles - we will literally turn them back on!
                     </div>
@@ -148,10 +148,10 @@
             </div>
         </div>
 </section>
-<section id="services" class="services bg-primary">
+<section id="about" class="services bg-primary">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-sm-6">
+                <div class="col-lg-6 col-sm-12 col-xs-12">
                     <h2>ABOUT</h2><br>
                     With over seven years experience as a personal trainer Whitney uses safe, effective, and dynamic movement patterns to help her clients look and feel their best. Whether you are a professional athlete, business man, or working Mom, she believes that focusing on proper posture and body alignment are the foundation for any training regimen.  Nothing brings her greater joy than helping others reach their goals by teaching them how to move properly, correct body imbalances, and gain strength.<br>
                     <h2>CERTIFICATIONS/ACHIEVEMENTS</h2>
@@ -234,6 +234,17 @@
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
+
+      //Stack menu when collapsed
+$('#bs-example-navbar-collapse-1').on('show.bs.collapse', function() {
+    $('.nav-pills').addClass('nav-stacked');
+});
+
+//Unstack menu when not collapsed
+$('#bs-example-navbar-collapse-1').on('hide.bs.collapse', function() {
+    $('.nav-pills').removeClass('nav-stacked');
+});
+
 
     // Scrolls to the selected menu item on the page
     $(function() {
